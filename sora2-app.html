@@ -7,6 +7,21 @@
     Skip the waitlist and iOS requirement. This free, open-source app lets you access 
     OpenAI's Sora 2 Video API directly in your browser - works on ANY device!
     
+    💳 YOU CONTROL THE COSTS:
+    ✓ Use YOUR OWN OpenAI API key
+    ✓ YOU are charged directly by OpenAI (not us!)
+    ✓ No middleman, no markup, no hidden fees
+    ✓ Pay exactly what OpenAI charges - nothing more
+    ✓ Full transparency - you see the cost before generating
+    
+    🔒 YOUR API KEY IS PRIVATE & SECURE:
+    ✓ Stored ONLY on YOUR computer (browser localStorage)
+    ✓ NEVER sent to our servers - we don't have servers!
+    ✓ NEVER shared with anyone except OpenAI
+    ✓ Only YOU know your API key - no one else has access to it
+    ✓ Completely private - stored only on your device
+    ✓ Delete it anytime from Settings
+    
     ⚠️ IMPORTANT REQUIREMENTS:
     ✓ ORGANIZATION MUST BE VERIFIED - Check at https://platform.openai.com/settings/organization/general
     ✗ FREE TIER NOT SUPPORTED - You MUST have a paid OpenAI account
@@ -17,10 +32,10 @@
     SETUP (Super Simple):
     1. Verify your OpenAI organization at https://platform.openai.com/settings/organization/general
     2. Set up billing on your OpenAI account (free tier won't work)
-    3. Get your API key from: https://platform.openai.com/api-keys
+    3. Get YOUR OWN API key from: https://platform.openai.com/api-keys
     4. Open this file in your browser (Windows, Mac, Linux, Android - anything!)
-    5. Click "Settings" and enter your API key
-    6. Start generating videos instantly!
+    5. Click "Settings" and enter YOUR API key
+    6. Start generating videos - YOU pay OpenAI directly for what YOU use!
     
     WHY USE THIS APP?
     ✓ No invite code needed
@@ -29,9 +44,12 @@
     ✓ No app download or installation
     ✓ Direct API access - same quality as the official app
     ✓ Open source and transparent
+    ✓ YOUR API key = YOU control costs
+    ✓ No middleman markup or hidden fees
     
     NOTE: You still need a verified, paid OpenAI account to use the API - 
     but you skip the invite-only iOS app and can use it from any device!
+    You bring your own API key, so only YOU are charged for what YOU use.
     
     RATE LIMITS BY TIER:
     - Free Tier: NOT SUPPORTED (you must have a paid account)
@@ -47,7 +65,7 @@
     OFFICIAL API DOCUMENTATION:
     https://platform.openai.com/docs/guides/video
     
-    PRICING (Charged directly to your OpenAI account):
+    PRICING (Charged directly to YOUR OpenAI account):
     - sora-2 model: $0.10 per second
     - sora-2-pro model: $0.30 per second (720p), $0.50 per second (1024p)
     - Supported durations: 4, 8, or 12 seconds
@@ -63,21 +81,21 @@
     
     Your API key is stored locally in your browser and never sent anywhere except OpenAI.
     
-    GitHub: https://github.com/yourusername/sora2-open-source
+    GitHub: https://github.com/OlexiyPukhov/sora2-open-source
     License: MIT
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Don't have an invite code or iOS? Use Sora 2 here! Free, open-source web app to access OpenAI's Sora 2 Video API directly. Works on any device. Requires verified, paid OpenAI account.">
-    <meta property="og:title" content="Sora 2 - No Invite or iOS Needed! Generate AI Videos Now">
-    <meta property="og:description" content="Skip the waitlist and iOS requirement. Access Sora 2 API directly in your browser with your OpenAI API key. Requires verified organization.">
+    <meta name="description" content="Don't have an invite code or iOS? Use Sora 2 here! Use YOUR OWN OpenAI API key - no middleman fees. Open-source web app to access Sora 2 Video API directly from any device.">
+    <meta property="og:title" content="Sora 2 - No Invite or iOS Needed! Your API Key = Your Costs">
+    <meta property="og:description" content="Skip the waitlist. Use your own OpenAI API key - you're charged directly by OpenAI with no markup. Works on any device!">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sora 2 - No Invite or iOS Needed!">
-    <meta name="twitter:description" content="Free open-source app to use OpenAI's Sora 2 Video API on any device. Verified OpenAI org required.">
-    <title>Sora 2 - No Invite or iOS Needed! Generate AI Videos Now</title>
+    <meta name="twitter:title" content="Sora 2 - Your API Key, Your Costs">
+    <meta name="twitter:description" content="Free open-source Sora 2 app. Use your own API key - no middleman fees. Direct billing from OpenAI.">
+    <title>Sora 2 Studio - Your API Key, Your Costs, No Middleman | Free & Open Source</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -568,9 +586,12 @@
                                             <SparklesIcon />
                                             <span className="ml-2">No Invite Code or iOS Required!</span>
                                         </h3>
-                                        <p className="text-gray-300">
+                                        <p className="text-gray-300 mb-2">
                                             Skip the waitlist and iOS requirement. Access OpenAI's Sora 2 API directly in your browser with just your API key. 
                                             No app download needed - works on any device!
+                                        </p>
+                                        <p className="text-sm text-green-300 font-semibold">
+                                            💳 You use YOUR OWN API key → Only YOU are charged by OpenAI → No middleman fees!
                                         </p>
                                     </div>
                                 </div>
@@ -590,6 +611,9 @@
                                         <h3 className="text-lg font-bold text-yellow-400 mb-2">⚠️ Important: API Requirements</h3>
                                         <div className="space-y-2 text-sm text-gray-300">
                                             <p>
+                                                <strong className="text-yellow-400">• You use YOUR OWN API key:</strong> This app doesn't charge you anything. You bring your own OpenAI API key and are billed directly by OpenAI for usage.
+                                            </p>
+                                            <p>
                                                 <strong className="text-yellow-400">• Organization must be verified:</strong> Your OpenAI organization needs to be verified before you can use the API. This is a separate requirement from having an API key.
                                             </p>
                                             <p>
@@ -599,7 +623,7 @@
                                                 <strong className="text-yellow-400">• Rate limits apply:</strong> Your tier determines how many videos you can generate per minute (Tier 1: 2/min, Tier 2: 5/min, etc.). You may encounter rate limit errors depending on your API key's tier.
                                             </p>
                                             <p>
-                                                <strong className="text-yellow-400">• Usage costs:</strong> You'll be charged $0.10 per second (720p) or $0.30-$0.50 per second (1024p) directly to your OpenAI account.
+                                                <strong className="text-yellow-400">• Usage costs:</strong> You'll be charged $0.10 per second (720p) or $0.30-$0.50 per second (1024p) directly to YOUR OpenAI account - no markup from us.
                                             </p>
                                         </div>
                                     </div>
@@ -692,7 +716,8 @@
                                         <div className="flex justify-between items-center">
                                             <div>
                                                 <span className="text-gray-300 text-sm">Estimated Cost</span>
-                                                <p className="text-xs text-gray-400 mt-1">Charged to your OpenAI account</p>
+                                                <p className="text-xs text-gray-400 mt-1">Charged directly to YOUR OpenAI account</p>
+                                                <p className="text-xs text-blue-400 mt-1 font-semibold">No markup • No middleman fees</p>
                                             </div>
                                             <span className="text-2xl font-bold text-purple-400">${calculateCost()}</span>
                                         </div>
@@ -791,6 +816,14 @@
                                         <div className="flex items-center p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                                             <CheckIcon />
                                             <span className="text-green-400 ml-2 text-sm font-semibold">Works Any Device</span>
+                                        </div>
+                                        <div className="flex items-center p-3 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+                                            <CheckIcon />
+                                            <span className="text-blue-400 ml-2 text-sm font-semibold">Your API = Your Costs</span>
+                                        </div>
+                                        <div className="flex items-center p-3 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+                                            <CheckIcon />
+                                            <span className="text-blue-400 ml-2 text-sm font-semibold">No Middleman Fees</span>
                                         </div>
                                         <div className="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg mt-4">
                                             <span className="text-gray-400">Videos Created</span>
@@ -893,7 +926,7 @@
                             <div className="glass-effect p-8 rounded-2xl max-w-md w-full slide-in-up">
                                 <h2 className="text-2xl font-bold mb-4">API Settings</h2>
                                 <p className="text-gray-400 mb-4">
-                                    Enter your OpenAI API key to start generating videos. 
+                                    Enter YOUR OWN OpenAI API key to start generating videos. 
                                     Get your key from{' '}
                                     <a 
                                         href="https://platform.openai.com/api-keys" 
@@ -914,6 +947,18 @@
                                     </a>
                                     .
                                 </p>
+                                
+                                {/* Direct Billing Notice */}
+                                <div className="mb-4 bg-blue-900/30 border border-blue-500/30 rounded-lg p-4">
+                                    <p className="text-sm text-blue-300 font-semibold mb-2">💳 Direct Billing:</p>
+                                    <ul className="text-xs text-blue-200 space-y-1">
+                                        <li>• You use YOUR OWN OpenAI API key</li>
+                                        <li>• YOU are charged directly by OpenAI</li>
+                                        <li>• No middleman markup or hidden fees</li>
+                                        <li>• Full transparency - you control all costs</li>
+                                        <li>• <strong>Your API key stored only on YOUR computer - no one else knows it</strong></li>
+                                    </ul>
+                                </div>
                                 
                                 {/* Requirements Warning */}
                                 <div className="mb-4 bg-yellow-900/30 border border-yellow-500/30 rounded-lg p-4">
@@ -942,9 +987,15 @@
                                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent mb-4"
                                 />
                                 <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-3 mb-4">
-                                    <p className="text-xs text-blue-300">
-                                        🔒 Your API key is stored locally in your browser and never sent anywhere except OpenAI.
+                                    <p className="text-xs text-blue-300 font-semibold mb-2">
+                                        🔒 Your API key is completely private:
                                     </p>
+                                    <ul className="text-xs text-blue-200 space-y-1">
+                                        <li>• Stored ONLY on YOUR computer (browser localStorage)</li>
+                                        <li>• NEVER sent to our servers - we don't have servers!</li>
+                                        <li>• Only sent directly to OpenAI when generating videos</li>
+                                        <li>• <strong>Only YOU know your API key - no one else has access</strong></li>
+                                    </ul>
                                 </div>
                                 <div className="flex space-x-3">
                                     <button
@@ -985,6 +1036,9 @@
                                     </p>
                                     <p className="text-sm text-green-400 font-semibold">
                                         ✨ No Invite Code or iOS Needed - Use Sora 2 API Directly!
+                                    </p>
+                                    <p className="text-xs text-blue-400 mt-1">
+                                        Your API key • Your costs • No middleman fees
                                     </p>
                                 </div>
                                 <div className="flex space-x-6 text-gray-400">
